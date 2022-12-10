@@ -2,13 +2,16 @@ package parkyes90.initspring.service;
 
 import parkyes90.initspring.domain.Member;
 import parkyes90.initspring.repository.MemberRepository;
-import parkyes90.initspring.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
 
     /**
