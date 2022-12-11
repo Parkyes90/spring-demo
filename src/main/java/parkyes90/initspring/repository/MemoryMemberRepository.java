@@ -1,9 +1,11 @@
 package parkyes90.initspring.repository;
 
+import org.springframework.stereotype.Repository;
 import parkyes90.initspring.domain.Member;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private static final Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
