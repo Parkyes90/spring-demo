@@ -1,5 +1,6 @@
 package parkyes90.initspring.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import parkyes90.initspring.domain.Member;
 import parkyes90.initspring.repository.MemberRepository;
@@ -7,6 +8,7 @@ import parkyes90.initspring.repository.MemberRepository;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
